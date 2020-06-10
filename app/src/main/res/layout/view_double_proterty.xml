@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView style="@style/CardView.Title"
+                android:id="@+id/title1TextView"
+                android:text="@string/sample_text" />
+
+            <TextView style="@style/CardView.Text.Large"
+                android:id="@+id/value1TextView"
+                android:text="@string/sample_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView style="@style/CardView.Title"
+                android:id="@+id/title2TextView"
+                android:text="@string/sample_text" />
+
+            <TextView style="@style/CardView.Text.Large"
+                android:id="@+id/value2TextView"
+                android:text="@string/sample_text" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_separator" />
+
+</LinearLayout>

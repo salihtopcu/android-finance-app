@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView style="@style/CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout style="@style/CardViewContent"
+            android:id="@+id/buttonContentLinearLayout"
+            android:orientation="horizontal"
+            android:background="@color/accent">
+
+            <ImageView
+                android:id="@+id/iconImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:scaleType="centerInside"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_star_black"
+                android:tint="@color/cardview_light_background"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/miniTitleTextView"
+                    style="@style/CardView.Title"
+                    android:textColor="@color/cardview_light_background"
+                    android:text="@string/sample_text" />
+
+                <TextView style="@style/CardView.Text.Large"
+                    android:id="@+id/titleTextView"
+                    android:layout_alignStart="@+id/branchNameTextView"
+                    android:layout_below="@+id/branchNameTextView"
+                    android:textColor="@color/cardview_light_background"
+                    android:text="@string/sample_text"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView style="@style/CardView.Text.Paragraph"
+                    android:id="@+id/descriptionTextView"
+                    android:layout_alignStart="@+id/branchNameTextView"
+                    android:layout_below="@+id/bankNameTextView"
+                    android:textColor="@color/cardview_light_background"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/sample_medium_text" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/arrowImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_right_arrow_black"
+                android:tint="@color/cardview_light_background"
+                android:layout_gravity="bottom"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
+

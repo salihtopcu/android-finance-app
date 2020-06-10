@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.activity.CompanyProfileActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/activity_vertical_margin"
+            android:paddingHorizontal="@dimen/activity_horizontal_margin_for_card_content">
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/taxNoEditText"
+                android:drawableLeft="@drawable/ic_receipt_black"
+                android:hint="@string/tax_no"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/taxOfficeEditText"
+                android:drawableLeft="@drawable/ic_receipt_black"
+                android:hint="@string/tax_office"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/companyNameEditText"
+                android:drawableLeft="@drawable/ic_fountain_pen"
+                android:hint="@string/company_name"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/Select"
+                android:id="@+id/cityEditText"
+                android:drawableLeft="@drawable/ic_locations_black"
+                android:hint="@string/city"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/Select"
+                android:id="@+id/countyEditText"
+                android:drawableLeft="@drawable/ic_locations_black"
+                android:hint="@string/county"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/addressEditText"
+                android:layout_height="100dp"
+                android:maxLines="3"
+                android:drawableLeft="@drawable/ic_envelope_black"
+                android:hint="@string/address"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/postCodeEditText"
+                android:drawableLeft="@drawable/ic_envelope_black"
+                android:hint="@string/post_code"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/phoneNumberEditText"
+                android:drawableLeft="@drawable/ic_phone_black"
+                android:inputType="number"
+                android:hint="@string/phone_number"
+                android:digits="0123456789"
+                app:format="(###) ### ## ##"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/emailEditText"
+                android:drawableLeft="@drawable/ic_email_black"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"/>
+
+            <!--<com.gelistirmen.finance.presentation.view.FMEditText style="@style/EditText"-->
+                <!--android:id="@+id/webSiteEditText"-->
+                <!--android:drawableLeft="@drawable/ic_web_site_black"-->
+                <!--android:hint="@string/web_site" />-->
+
+            <com.gelistirmen.finance.presentation.view.FMButton
+                style="@style/DarkButton"
+                android:id="@+id/saveButton"
+                android:layout_marginLeft="@dimen/card_default_horizontal_margin"
+                android:layout_marginRight="@dimen/card_default_horizontal_margin"
+                android:layout_marginTop="16dp"
+                android:text="@string/save" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

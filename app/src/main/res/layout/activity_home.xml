@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.gelistirmen.finance.presentation.activity.HomeActivity"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/section1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:paddingVertical="@dimen/activity_vertical_margin">
+
+                <TextView
+                    style="@style/ContentTitle"
+                    android:text="@string/recent_invoices" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbarSize="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/recentInvoicesLinearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12dp"
+                        android:orientation="horizontal">
+
+                        <!--<include layout="@layout/list_item_invoice_for_horizontal" />-->
+
+                        <!--<include layout="@layout/list_item_invoice_for_horizontal" />-->
+
+                        <!--<include layout="@layout/list_item_invoice_for_horizontal" />-->
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:id="@+id/section1Footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView style="@style/ContentText"
+                        android:id="@+id/moreInvoicesTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/card_default_padding"
+                        android:text="4 more incoives"
+                        android:visibility="gone"/>
+
+                    <com.gelistirmen.finance.presentation.view.FMButton
+                        style="@style/TextButtonSmall"
+                        android:id="@+id/seeAllRecentInvoicesButton"
+                        android:layout_marginRight="@dimen/card_default_padding"
+                        android:text="@string/see_all"
+                        android:layout_gravity="right"
+                        android:drawablePadding="8dp"
+                        android:drawableRight="@drawable/ic_right_arrow_black"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <TextView style="@style/ContentText"
+                    android:id="@+id/noItemInfo1TextView"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="@string/no_recent_invoices_info"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/section2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/activity_vertical_margin"
+                android:background="@drawable/home_section_background">
+
+                <TextView
+                    style="@style/ContentTitle"
+                    android:text="@string/my_active_factoring_processes" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:scrollbarSize="0dp" >
+
+                    <LinearLayout
+                        android:id="@+id/activeProcessesLinearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/activity_horizontal_margin_for_card_content">
+
+                        <!--<include layout="@layout/list_item_factoring_process_for_horizontal" />-->
+
+                        <!--<include layout="@layout/list_item_invoice_for_horizontal" />-->
+
+                        <!--<include layout="@layout/list_item_factoring_process_for_horizontal" />-->
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:id="@+id/section2Footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView style="@style/ContentText"
+                        android:id="@+id/moreProcessesTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/card_default_padding"
+                        android:text="2 more processes"
+                        android:visibility="gone"/>
+
+                    <com.gelistirmen.finance.presentation.view.FMButton
+                        style="@style/TextButtonSmall"
+                        android:id="@+id/seeAllProcessesButton"
+                        android:layout_marginRight="@dimen/card_default_padding"
+                        android:text="@string/see_all"
+                        android:layout_gravity="right"
+                        android:drawablePadding="8dp"
+                        android:drawableRight="@drawable/ic_right_arrow_black"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <TextView style="@style/ContentText"
+                    android:id="@+id/noItemInfo2TextView"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="@string/no_active_processes_info"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/section3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/activity_vertical_margin"
+                android:background="@drawable/home_section_background">
+
+                <TextView
+                    style="@style/ContentTitle"
+                    android:text="@string/invoices_waiting_for_approval" />
+
+                <!--<TextView style="@style/ContentText"-->
+                <!--android:id="@+id/noItemsToApproveTextView"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:text="No items to approve"/>-->
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbarSize="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/quotesLinearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/activity_horizontal_margin_for_card_content">
+
+                        <!--<include layout="@layout/list_item_factoring_process_for_horizontal" />-->
+
+                        <!--<include layout="@layout/list_item_invoice_for_horizontal" />-->
+
+                        <!--<include layout="@layout/list_item_factoring_process_for_horizontal" />-->
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:id="@+id/section3Footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView style="@style/ContentText"
+                        android:id="@+id/moreQuotesTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/card_default_padding"
+                        android:text="2 more quotes"
+                        android:visibility="gone"/>
+
+                    <com.gelistirmen.finance.presentation.view.FMButton
+                        style="@style/TextButtonSmall"
+                        android:id="@+id/seeAllQuotesButton"
+                        android:layout_marginRight="@dimen/card_default_padding"
+                        android:text="@string/see_all"
+                        android:layout_gravity="right"
+                        android:drawablePadding="8dp"
+                        android:drawableRight="@drawable/ic_right_arrow_black"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <TextView style="@style/ContentText"
+                    android:id="@+id/noItemInfo3TextView"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="@string/no_waiting_invoice_for_approval_info"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
+
+

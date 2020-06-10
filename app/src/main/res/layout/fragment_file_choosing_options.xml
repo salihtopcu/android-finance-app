@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.FileChoosingOptionsFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/activity_horizontal_margin"
+            android:paddingVertical="@dimen/activity_vertical_margin"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_document_blue"
+                android:layout_margin="16dp"/>
+
+            <TextView
+                style="@style/Paragraph"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:textAlignment="center"
+                android:text="@string/file_choosing_info_for_invoice" />
+
+            <com.gelistirmen.finance.presentation.view.FMButton
+                style="@style/ContentButton.Large"
+                android:id="@+id/takePhotoButton"
+                android:layout_marginTop="24dp"
+                android:drawableLeft="@drawable/ic_camera_black"
+                android:drawableRight="@drawable/ic_right_arrow_black"
+                android:text="@string/take_photo" />
+
+            <TextView style="@style/Paragraph"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textAlignment="center"
+                android:text="@string/or" />
+
+            <com.gelistirmen.finance.presentation.view.FMButton
+                style="@style/ContentButton.Large"
+                android:id="@+id/chooseFromDeviceButton"
+                android:layout_marginTop="24dp"
+                android:drawableLeft="@drawable/ic_folder_upload_black"
+                android:drawableRight="@drawable/ic_right_arrow_black"
+                android:text="@string/choose_from_device" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

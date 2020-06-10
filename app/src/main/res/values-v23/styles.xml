@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/app_bg</item>
+        <item name="actionButtonStyle">@style/MyActionButtonStyle</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/app_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="DarkButton" parent="Button">
+        <item name="android:background">@drawable/blue_button_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:drawableTint">@color/white</item>
+    </style>
+
+    <style name="LightButton" parent="Button">
+        <item name="android:background">@drawable/white_button_background</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:drawableTint">@color/accent</item>
+    </style>
+
+    <style name="CardView" parent="android:Widget">
+        <item name="cardCornerRadius">@dimen/card_default_radius</item>
+        <item name="cardElevation">@dimen/card_default_elevation</item>
+        <item name="android:layout_marginLeft">@dimen/card_default_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/card_default_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/card_default_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/card_default_margin_bottom</item>
+        <item name="android:padding">@dimen/card_default_padding</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
+
+</resources>

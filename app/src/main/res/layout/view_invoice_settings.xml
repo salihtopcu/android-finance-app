@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView style="@style/CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout style="@style/CardViewContent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/imageContainer"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/pdf_icon_background">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_document_pdf_blue"
+                        android:scaleType="centerInside"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/numbersContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/card_default_padding"
+                    android:layout_marginLeft="@dimen/card_default_padding"
+                    android:layout_toEndOf="@+id/imageContainer"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/serialNumberTitleTextView"
+                        style="@style/CardView.Title"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/serial_number" />
+
+                    <TextView
+                        android:id="@+id/serialNumberTextView"
+                        style="@style/CardView.Text.Large"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/serialNumberTitleTextView"
+                        android:layout_marginBottom="5dp"
+                        android:text="1234567890" />
+
+                    <TextView
+                        android:id="@+id/invoiceNumberTitleTextView"
+                        style="@style/CardView.Title"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/invoice_number" />
+
+                    <TextView
+                        android:id="@+id/invoiceNumberTextView"
+                        style="@style/CardView.Text.Large"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/invoiceNumberTitleTextView"
+                        android:text="1234567890" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="top|end"
+                    android:background="@color/transparent"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_bin_red" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_separator" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/activity_horizontal_margin_for_card_content">
+
+                <TextView style="@style/CardView.Title"
+                    android:id="@+id/interestSettingTitleTextView"
+                    android:text="@string/who_will_pay_the_interest_expense" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.gelistirmen.finance.presentation.view.FMCheckBox
+                        style="@style/CheckBox"
+                        android:id="@+id/sellerCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:uncheckable="false"
+                        android:layout_marginLeft="0dp"
+                        android:text="@string/seller"/>
+
+                    <com.gelistirmen.finance.presentation.view.FMCheckBox
+                        style="@style/CheckBox"
+                        android:id="@+id/buyerCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:uncheckable="false"
+                        android:text="@string/invoice_debtor"/>
+
+                </LinearLayout>
+
+                <TextView style="@style/CardView.Title"
+                    android:id="@+id/amountSettingTitleTextView"
+                    android:text="@string/do_you_process_the_entire_invoice_amount"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.gelistirmen.finance.presentation.view.FMCheckBox
+                        style="@style/CheckBox"
+                        android:id="@+id/allAmountCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:uncheckable="false"
+                        android:text="@string/all_amount"
+                        android:layout_marginLeft="0dp"/>
+
+                    <com.gelistirmen.finance.presentation.view.FMCheckBox
+                        style="@style/CheckBox"
+                        android:id="@+id/setAmountCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:uncheckable="false"
+                        android:text="@string/set_amount"
+                        android:layout_marginLeft="0dp"
+                        android:paddingRight="0dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/view_separator" />
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/amountEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_tl_black"
+                android:hint="@string/type_invoice_amount"
+                android:layout_marginVertical="@dimen/activity_horizontal_margin_for_card_content"/>
+
+            <include layout="@layout/view_separator" />
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/DatePicker"
+                android:id="@+id/estimatedMaturityEditText"
+                android:layout_marginVertical="@dimen/activity_horizontal_margin_for_card_content"
+                android:hint="@string/estimated_maturity_date" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+

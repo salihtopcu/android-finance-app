@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FMEditText">
+        <attr name="format" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="FMCheckBox">
+        <attr name="activeColor" format="color"/>
+        <attr name="passiveColor" format="color"/>
+        <attr name="uncheckable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="FMRadioButton">
+        <attr name="textColorChecked" format="color"/>
+        <attr name="textColorUnchecked" format="color"/>
+    </declare-styleable>
+
+</resources>

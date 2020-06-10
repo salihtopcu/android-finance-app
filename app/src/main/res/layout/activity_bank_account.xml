@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.activity.BankAccountActivity">
+
+    <ScrollView android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/activity_vertical_margin"
+            android:paddingHorizontal="@dimen/activity_horizontal_margin_for_card_content">
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/bankNameEditText"
+                android:drawableLeft="@drawable/ic_store_black"
+                android:maxLength="30"
+                android:hint="@string/bank_name"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/branchCodeEditText"
+                android:drawableLeft="@drawable/ic_store_black"
+                android:maxLength="30"
+                android:hint="@string/branch"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/accountNoEditText"
+                android:drawableLeft="@drawable/ic_fountain_pen"
+                android:inputType="number"
+                android:digits="0123456789- "
+                android:maxLength="12"
+                android:hint="@string/account_no"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/ibanEditText"
+                android:drawableLeft="@drawable/ic_fountain_pen"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:hint="@string/iban_no"
+                app:format="TR## #### #### #### #### #### ##"/>
+
+            <com.gelistirmen.finance.presentation.view.FMButton
+                style="@style/DarkButton"
+                android:id="@+id/saveButton"
+                android:layout_marginLeft="@dimen/card_default_horizontal_margin"
+                android:layout_marginRight="@dimen/card_default_horizontal_margin"
+                android:layout_marginTop="16dp"
+                android:text="@string/save" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="4dp">
+
+    <android.support.v7.widget.CardView style="@style/CardView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout style="@style/CardViewContent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:gravity="bottom">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="5">
+
+                    <TextView style="@style/CardView.Title"
+                        android:text="@string/invoice_number" />
+
+                    <TextView style="@style/CardView.Text"
+                        android:id="@+id/numberTextView"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/title1"
+                        android:text="####" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="5">
+
+                    <TextView
+                        style="@style/CardView.Title"
+                        android:text="@string/process_date" />
+
+                    <TextView style="@style/CardView.Text"
+                        android:id="@+id/processDateTextView"
+                        android:text="##.##.####" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/serialNoTextView"
+                android:gravity="bottom">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="5">
+
+                    <TextView style="@style/CardView.Title"
+                        android:text="@string/invoice_amount" />
+
+                    <TextView style="@style/CardView.Text"
+                        android:id="@+id/invoiceAmountTextView"
+                        android:text="40.03" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="4">
+
+                    <TextView style="@style/CardView.Title"
+                        android:text="@string/amount" />
+
+                    <TextView style="@style/CardView.Text"
+                        android:id="@+id/amountTextView"
+                        android:text="40.03" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/arrowImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_right_arrow_black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

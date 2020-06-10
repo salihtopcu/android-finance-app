@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="4dp">
+
+    <android.support.v7.widget.CardView style="@style/CardView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+            <LinearLayout style="@style/CardViewContent"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <TextView style="@style/CardView.Title"
+                            android:text="@string/operation_date" />
+
+                        <TextView style="@style/CardView.Text.Large"
+                            android:id="@+id/dateTextView"
+                            android:text="00.00.0000" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView style="@style/CardView.Title"
+                            android:text="@string/total_amount" />
+
+                        <TextView style="@style/CardView.Text.Large"
+                            android:id="@+id/amountTextView"
+                            android:text="00.00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="top">
+
+                        <ImageView
+                            android:id="@+id/arrowImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:src="@drawable/ic_right_arrow_black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView style="@style/CardView.Title"
+                        android:id="@+id/descriptionTextView"
+                        android:lines="1"
+                        android:text="@string/sample_medium_text"
+                        android:fontFamily="@font/blender_pro_bold"
+                        android:textColor="@color/step_view_accent" />
+
+                    <com.shuhart.stepview.StepView
+                        android:id="@+id/stepView"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="8dp"
+                        app:sv_stepsNumber="6"
+                        app:sv_doneStepMarkColor="@color/primary"
+                        app:sv_doneCircleColor="@color/accent"
+                        app:sv_doneStepLineColor="@color/accent"
+                        app:sv_selectedCircleColor="@color/step_view_accent"
+                        app:sv_selectedTextColor="@color/accent"
+                        app:sv_selectedStepNumberColor="@color/primary"
+                        app:sv_nextTextColor="@color/primary_dark"
+                        app:sv_nextStepLineColor="@color/primary_dark"
+                        app:sv_stepLineWidth="1dp"
+                        app:sv_stepPadding="0dp"
+                        app:sv_doneCircleRadius="12dp"
+                        app:sv_selectedCircleRadius="12dp"
+                        app:sv_stepViewStyle="@style/StepView"
+                        app:sv_stepNumberTextSize="12sp"
+                        app:sv_animationType="Circle"
+                        app:sv_typeface="@font/blender_pro_bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

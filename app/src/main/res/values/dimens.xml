@@ -1,0 +1,37 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin_for_card_content">12dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="card_default_horizontal_margin">4dp</dimen>
+    <dimen name="card_default_margin_top">3dp</dimen>
+    <dimen name="card_default_margin_bottom">5dp</dimen>
+    <dimen name="card_default_padding">12dp</dimen>
+    <dimen name="card_default_elevation">4dp</dimen>
+    <dimen name="card_default_radius">5dp</dimen>
+
+    <dimen name="font_size_action_bar_title">19sp</dimen>
+    <dimen name="font_size_paragraph">16sp</dimen>
+    <dimen name="line_spacing_paragraph">7sp</dimen>
+    <dimen name="font_size_paragraph_title">21sp</dimen>
+    <dimen name="line_spacing_paragraph_title">28sp</dimen>
+    <dimen name="letter_spacing_paragraph_title">0.3sp</dimen>
+    <dimen name="font_size_content_title">16sp</dimen>
+    <dimen name="font_size_content_text">12sp</dimen>
+    <dimen name="font_size_card_title">12sp</dimen>
+    <dimen name="font_size_card_text">15sp</dimen>
+    <dimen name="font_size_card_text_large">18sp</dimen>
+    <dimen name="font_size_card_paragraph">13sp</dimen>
+    <dimen name="line_spacing_card_content">5sp</dimen>
+    <dimen name="font_size_button">19sp</dimen>
+    <dimen name="font_size_text_button">16sp</dimen>
+    <dimen name="font_size_text_button_small">12sp</dimen>
+    <dimen name="font_size_edittext">14sp</dimen>
+    <dimen name="font_size_checkbox">14sp</dimen>
+    <dimen name="font_size_small">12sp</dimen>
+    <dimen name="font_size_nav_menu_button_title">19sp</dimen>
+</resources>

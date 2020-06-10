@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragment.InvoiceSettingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/activity_vertical_margin"
+        android:paddingHorizontal="@dimen/activity_horizontal_margin_for_card_content">
+
+        <LinearLayout
+            android:id="@+id/listContainerLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <com.gelistirmen.finance.presentation.view.FMButton
+            style="@style/ContentButton.Large"
+            android:id="@+id/addInvoiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:text="@string/add_invoice"
+            android:drawableLeft="@drawable/ic_document_add_black"/>
+
+        <TextView style="@style/Paragraph"
+            android:text="@string/invoice_upload_settings_description"
+            android:layout_marginTop="16dp"/>
+
+        <com.gelistirmen.finance.presentation.view.FMButton
+            style="@style/DarkButton"
+            android:id="@+id/saveButton"
+            android:layout_marginTop="24dp"
+            android:text="@string/send_invoice" />
+
+    </LinearLayout>
+
+</ScrollView>

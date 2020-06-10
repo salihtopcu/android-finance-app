@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.activity.UploadDocumentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/activity_horizontal_margin_for_card_content"
+        android:paddingVertical="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_add_document_blue"/>
+        <TextView
+            style="@style/Paragraph"
+            android:layout_marginVertical="16dp"
+            android:text="@string/document_upload_description" />
+
+        <LinearLayout
+            android:id="@+id/documentTypesLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<include layout="@layout/view_document_type" />-->
+
+            <!--<include layout="@layout/view_document_type" />-->
+
+        </LinearLayout>
+
+
+        <com.gelistirmen.finance.presentation.view.FMButton
+            android:id="@+id/uploadFromWebButton"
+            style="@style/DarkButton"
+            android:layout_marginTop="32dp"
+            android:text="@string/upload_from_web" />
+
+    </LinearLayout>
+
+</ScrollView>

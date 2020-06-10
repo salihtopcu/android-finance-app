@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.activity.QuoteAssessmentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <TextView style="@style/ContentTitle"
+            android:layout_marginLeft="24dp"
+            android:text="@string/customer_info" />
+
+        <android.support.v7.widget.CardView style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+
+            <LinearLayout style="@style/CardViewContent"
+                android:id="@+id/customerInfoContentLinearLayout"
+                android:orientation="vertical"
+                android:padding="0dp"/>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView style="@style/ContentTitle"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/payment_info" />
+
+        <android.support.v7.widget.CardView style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+
+            <LinearLayout style="@style/CardViewContent"
+                android:id="@+id/paymentInfoContentLinearLayout"
+                android:orientation="vertical"
+                android:padding="0dp"/>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView style="@style/ContentTitle"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/invoice_info" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="0dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:id="@+id/invoicesLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin_for_card_content">
+
+                <!--<include layout="@layout/list_item_invoice_for_horizontal" />-->
+
+                <!--<include layout="@layout/list_item_invoice_for_horizontal" />-->
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView style="@style/Paragraph"
+            android:text="@string/quote_description"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"/>
+
+        <com.gelistirmen.finance.presentation.view.FMButton
+            style="@style/DarkButton"
+            android:id="@+id/changeButton"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:text="@string/change"
+            android:visibility="visible"/>
+
+        <com.gelistirmen.finance.presentation.view.FMButton
+            style="@style/DarkButton"
+            android:id="@+id/approveButton"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:text="@string/approve"
+            android:visibility="visible"/>
+
+        <com.gelistirmen.finance.presentation.view.FMButton
+            style="@style/RedButton"
+            android:id="@+id/declineButton"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:text="@string/decline"
+            android:visibility="visible"/>
+
+        <com.gelistirmen.finance.presentation.view.FMButton
+            style="@style/DarkButton"
+            android:id="@+id/completeButton"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:text="@string/complete"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+</ScrollView>

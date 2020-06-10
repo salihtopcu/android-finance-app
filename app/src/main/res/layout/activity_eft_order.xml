@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.activity.EftOrderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/activity_vertical_margin"
+        android:paddingHorizontal="@dimen/activity_horizontal_margin_for_card_content">
+
+        <android.support.v7.widget.CardView style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout style="@style/CardViewContent"
+                android:id="@+id/paymentInfoContentLinearLayout"
+                android:orientation="vertical"
+                android:padding="0dp"/>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView style="@style/ContentTitle"
+            android:text="@string/accounts"
+            android:layout_marginTop="16dp"/>
+
+        <android.support.v7.widget.CardView style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout style="@style/CardViewContent"
+                android:id="@+id/accountInfoContentLinearLayout"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+                <com.gelistirmen.finance.presentation.view.FMRadioButton
+                    style="@style/RadioButton"
+                    android:id="@+id/newAccountRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_new_account"
+                    android:layout_marginLeft="12dp"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/newAccountAreaLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/bankNameEditText"
+                android:drawableLeft="@drawable/ic_store_black"
+                android:maxLength="30"
+                android:hint="@string/bank_name"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/branchCodeEditText"
+                android:drawableLeft="@drawable/ic_store_black"
+                android:maxLength="30"
+                android:hint="@string/branch"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="16dp">
+
+                <com.gelistirmen.finance.presentation.view.FMRadioButton
+                    style="@style/RadioButton"
+                    android:id="@+id/ibanRadioButton"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/iban_no"
+                    android:checked="true"/>
+
+                <com.gelistirmen.finance.presentation.view.FMRadioButton
+                    style="@style/RadioButton"
+                    android:id="@+id/accountNoRadioButton"
+                    android:layout_weight="1"
+                    android:text="@string/account_no" />
+
+            </RadioGroup>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/ibanEditText"
+                android:drawableLeft="@drawable/ic_fountain_pen"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:hint="@string/iban_no"
+                app:format="TR## #### #### #### #### #### ##"/>
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/accountNoEditText"
+                android:drawableLeft="@drawable/ic_fountain_pen"
+                android:inputType="number"
+                android:digits="0123456789- "
+                android:maxLength="12"
+                android:hint="@string/account_no"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <com.gelistirmen.finance.presentation.view.FMButton
+            style="@style/DarkButton"
+            android:id="@+id/continueButton"
+            android:layout_marginLeft="@dimen/card_default_horizontal_margin"
+            android:layout_marginRight="@dimen/card_default_horizontal_margin"
+            android:layout_marginTop="16dp"
+            android:text="@string/continue_" />
+
+    </LinearLayout>
+
+</ScrollView>

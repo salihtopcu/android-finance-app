@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.activity.ContractActivity"
+    android:paddingHorizontal="@dimen/activity_horizontal_margin_for_card_content"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <android.support.v7.widget.CardView style="@style/CardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.github.barteksc.pdfviewer.PDFView style="@style/CardViewContent"
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v7.widget.CardView>
+
+    <com.gelistirmen.finance.presentation.view.FMButton
+        style="@style/DarkButton"
+        android:id="@+id/acceptButton"
+        android:drawableRight="@drawable/ic_right_arrow_white"
+        android:text="@string/accept"
+        android:layout_marginHorizontal="@dimen/card_default_horizontal_margin"/>
+
+</LinearLayout>

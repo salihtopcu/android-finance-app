@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gelistirmen.finance">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.gelistirmen.finance.permission.C2D_MESSAGE" />
+
+    <permission
+        android:name="com.gelistirmen.finance.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="49" />
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
+
+    <application
+        android:name="com.gelistirmen.finance.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <service
+            android:name="com.gelistirmen.finance.util.MyInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.gelistirmen.finance.util.RegistrationIntentService"
+            android:exported="false"></service>
+
+        <receiver
+            android:name="com.microsoft.windowsazure.notifications.NotificationsBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.gelistirmen.finance" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.gelistirmen.finance.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                tools:replace="android:resource"></meta-data>
+        </provider>
+
+        <activity
+            android:name="com.gelistirmen.finance.presentation.activity.SplashActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gelistirmen.finance.presentation.activity.PreLoginActivity" />
+        <activity
+            android:name="com.gelistirmen.finance.presentation.activity.LoginActivity"
+            android:windowSoftInputMode="adjustResize"
+            />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.RegisterActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.ForgotPasswordActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.ChangePasswordActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.HomeActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.SimpleListActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.SettingsActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.UserProfileActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.UploadInvoiceActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.OnlineOperationsActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.NotificationsActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.CompanyProfileActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.UploadInvoiceSuccessActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.UploadDocumentActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.QuoteAssessmentActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.InvoiceAssessmentActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.AboutApplicationActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.InvoiceActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.BankAccountActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.EftOrderActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.ContractActivity" />
+        <activity android:name="com.gelistirmen.finance.presentation.activity.MobileSignatureActivity" />
+    </application>
+
+</manifest>

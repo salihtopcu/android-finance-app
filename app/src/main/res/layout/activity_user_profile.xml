@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.activity.UserProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/activity_vertical_margin"
+        android:paddingHorizontal="@dimen/activity_horizontal_margin_for_card_content">
+        
+        <!--<ImageView-->
+            <!--android:layout_width="96dp"-->
+            <!--android:layout_height="96dp"-->
+            <!--android:src="@mipmap/ic_launcher_round"-->
+            <!--android:layout_gravity="center_horizontal"/>-->
+
+        <TextView style="@style/AvatarText.Large"
+            android:id="@+id/avatarTextView"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_avatar_white"
+            android:text="FM"
+            android:textColor="@color/accent" />
+
+        <TextView style="@style/ParagraphTitle"
+            android:id="@+id/nameTextView"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/blender_pro_bold"
+            android:textSize="19sp"
+            android:text="" />
+
+        <TextView style="@style/ContentTitle"
+            android:layout_marginTop="32dp"
+            android:text="@string/profile_info" />
+
+        <android.support.v7.widget.CardView style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout style="@style/CardViewContent"
+                android:id="@+id/profileInfoContentLinearLayout"
+                android:orientation="vertical"
+                android:padding="0dp"/>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView style="@style/ContentTitle"
+            android:id="@+id/bankAccountsTitleTextView"
+            android:layout_marginTop="32dp"
+            android:text="@string/bank_accounts" />
+
+        <android.support.v7.widget.CardView style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout style="@style/CardViewContent"
+                android:id="@+id/bankAccountsContentLinearLayout"
+                android:orientation="vertical"
+                android:padding="0dp"/>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView style="@style/ContentTitle"
+            android:layout_marginTop="32dp"
+            android:text="@string/company_info" />
+
+        <android.support.v7.widget.CardView style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout style="@style/CardViewContent"
+                android:id="@+id/companyInfoContentLinearLayout"
+                android:orientation="vertical"
+                android:padding="0dp"/>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout style="@style/CardViewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <TextView style="@style/CardView.Text"
+                android:id="@+id/dateDescriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/sample_medium_text"/>
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.gelistirmen.finance.presentation.view.FMEditText
+                style="@style/EditText"
+                android:id="@+id/noteEditText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:lines="3"
+                android:maxLength="250"
+                android:hint="type note"
+                android:gravity="top"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.gelistirmen.finance.presentation.view.FMButton
+        style="@style/DarkButton"
+        android:id="@+id/okButton"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/dialog_button_background_blue"
+        android:text="@string/ok"/>
+
+</LinearLayout>

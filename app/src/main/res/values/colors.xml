@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#00EEEEEE</color>
+    <color name="primary_dark">#CCCCCC</color>
+    <color name="app_bg">#F6F6F5</color>
+    <color name="accent">#28458C</color>
+    <color name="accent_weak">#8028458c</color>
+    <color name="accent_alt">#DB102E</color>
+    <color name="white">#FFFFFF</color> <!--bunu kullanmaktan vazgec-->
+    <color name="white_weak">#66FFFFFF</color>
+    <color name="action_bar_title">#3C4042</color>
+    <color name="paragraph">#3C4042</color>
+    <color name="paragraph_title">#3C4042</color>
+    <color name="content_title">#8E9091</color>
+    <color name="content_text">#8E9091</color>
+    <color name="card_title">#8E9091</color>
+    <color name="card_content">#3C4042</color>
+    <color name="input_bg">#FFFFFF</color>
+    <color name="input_hint">#80201F1F</color>
+    <color name="input_text">#3C4042</color>
+    <color name="transparent">#00000000</color>
+    <color name="nav_menu_button_title">#FFFFFF</color>
+    <color name="nav_menu_button_separator">#4266BE</color>
+    <color name="light_gray">#E9E9E9</color>
+    <color name="step_view_accent">#239BD5</color>
+</resources>
