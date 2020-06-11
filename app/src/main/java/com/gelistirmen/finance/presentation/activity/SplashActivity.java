@@ -8,6 +8,7 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MyApplication;
 import com.gelistirmen.finance.R;
 import com.gelistirmen.finance.data.local.Cache;
 import com.gelistirmen.finance.data.remote.base.VolleyDao;
@@ -59,8 +60,23 @@ public class SplashActivity extends BaseActivity {
         else
             allPermissionsGranted = true;
 
-        if (allPermissionsGranted)
-            this.doYourJob();
+        if (allPermissionsGranted) {
+            if (MyApplication.mocking) {
+                Thread thread = new Thread() {
+                    public void run() {
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        } finally {
+                            doYourJob();
+                        }
+                    }
+                };
+                thread.start();
+            } else
+                this.doYourJob();
+        }
     }
 
     private void doYourJob() {

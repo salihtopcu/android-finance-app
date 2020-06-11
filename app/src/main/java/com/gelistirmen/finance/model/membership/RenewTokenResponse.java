@@ -9,6 +9,11 @@ public class RenewTokenResponse {
     public String token;
     public String refreshToken;
 
+    public RenewTokenResponse(String token, String refreshToken) {
+        this.token = token;
+        this.refreshToken = refreshToken;
+    }
+
     public RenewTokenResponse(JSONObject jsonObject) {
         try {
             this.token = Method.getString(jsonObject, "token");

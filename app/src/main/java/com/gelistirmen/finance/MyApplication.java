@@ -13,6 +13,7 @@ public class MyApplication extends Application {
     public static UserProfile userProfile;
 
     public static boolean developmentMode = false;
+    public static boolean mocking = true;
 
     public RequestQueue requestQueue;
 

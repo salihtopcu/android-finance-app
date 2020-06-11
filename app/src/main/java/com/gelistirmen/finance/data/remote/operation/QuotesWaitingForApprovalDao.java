@@ -1,6 +1,9 @@
 package com.gelistirmen.finance.data.remote.operation;
 
+import android.support.annotation.Nullable;
+
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MockProvider;
 import com.gelistirmen.finance.data.remote.base.FMDao;
 import com.gelistirmen.finance.model.operation.Quote;
 
@@ -19,5 +22,11 @@ public class QuotesWaitingForApprovalDao extends FMDao {
         if (data instanceof JSONArray)
             quotes = new Quote.List((JSONArray) data);
         super.onAfterSuccessRequest(quotes);
+    }
+
+    @Nullable
+    @Override
+    protected Object getMockData() {
+        return MockProvider.quotes();
     }
 }

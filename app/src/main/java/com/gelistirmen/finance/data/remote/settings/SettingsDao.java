@@ -1,9 +1,11 @@
 package com.gelistirmen.finance.data.remote.settings;
 
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.android.volley.Request;
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MockProvider;
 import com.gelistirmen.finance.data.remote.base.FMDao;
 import com.gelistirmen.finance.model.settings.SettingsModel;
 
@@ -36,5 +38,11 @@ public class SettingsDao extends FMDao {
             super.onAfterSuccessRequest(new SettingsModel((JSONObject) data));
         else if (super.method == Request.Method.PUT)
             super.onAfterSuccessRequest();
+    }
+
+    @Nullable
+    @Override
+    protected Object getMockData() {
+        return MockProvider.settingsModel();
     }
 }

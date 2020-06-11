@@ -54,7 +54,8 @@ public class UserProfileActivity extends BaseActivity {
     public void loadContent() {
         super.showProgressDialog();
         super.loadUserProfile();
-        this.scrollView.setVisibility(View.INVISIBLE);
+        if (!MyApplication.mocking)
+            this.scrollView.setVisibility(View.INVISIBLE);
     }
 
     private void displayUserProfile() {

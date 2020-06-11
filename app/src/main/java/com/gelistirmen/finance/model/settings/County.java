@@ -13,6 +13,12 @@ public class County {
     public String name;
     public City city;
 
+    public County(String id, String name, City city) {
+        this.id = id;
+        this.name = name;
+        this.city = city;
+    }
+
     public County(JSONObject jsonObject) {
         try {
             this.id = Method.getString(jsonObject, "id");

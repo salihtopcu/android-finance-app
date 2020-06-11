@@ -39,7 +39,8 @@ public class BankAccountActivity extends BaseActivity {
     @Override
     public void loadContent() {
         new BankAccountDao(this, this.bankAccountId).execute();
-        super.showProgressDialog();
+        if (!MyApplication.mocking)
+            super.showProgressDialog();
     }
 
     private void displayBankAccount() {

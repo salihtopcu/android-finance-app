@@ -19,6 +19,14 @@ public class Notification {
     public Date createdDate;
     public boolean isNotified;
 
+    public Notification(String id, String iconUrl, String message, Date createdDate, boolean isNotified) {
+        this.id = id;
+        this.iconUrl = iconUrl;
+        this.message = message;
+        this.createdDate = createdDate;
+        this.isNotified = isNotified;
+    }
+
     public Notification(JSONObject jsonObject) {
         try {
             this.id = Method.getString(jsonObject, "id");

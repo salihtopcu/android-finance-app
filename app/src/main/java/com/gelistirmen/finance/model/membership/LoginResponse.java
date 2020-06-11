@@ -11,6 +11,13 @@ public class LoginResponse {
     public String refreshToken;
     public boolean changePasswordRequest;
 
+    public LoginResponse(String userId, String token, String refreshToken, boolean changePasswordRequest) {
+        this.userId = userId;
+        this.token = token;
+        this.refreshToken = refreshToken;
+        this.changePasswordRequest = changePasswordRequest;
+    }
+
     public LoginResponse(JSONObject jsonObject) {
         try {
             this.userId = Method.getString(jsonObject, "id");

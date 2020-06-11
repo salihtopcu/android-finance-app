@@ -6,6 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MyApplication;
 import com.gelistirmen.finance.R;
 import com.gelistirmen.finance.data.remote.base.VolleyDao;
 import com.gelistirmen.finance.data.remote.operation.InvoiceDao;
@@ -36,7 +37,8 @@ public class InvoiceActivity extends BaseActivity {
         super.showActionBarBackButton();
         super.hideBackgroundImage();
         super.setMainScrollContent(this.scrollView);
-        this.scrollView.setVisibility(View.INVISIBLE);
+        if (!MyApplication.mocking)
+            this.scrollView.setVisibility(View.INVISIBLE);
     }
 
     @Override

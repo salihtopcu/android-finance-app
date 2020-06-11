@@ -11,6 +11,13 @@ public class UserProfile {
     public String phoneNumber;
     public Company company;
 
+    public UserProfile(String id, String name, String phoneNumber, Company company) {
+        this.id = id;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.company = company;
+    }
+
     public UserProfile(JSONObject jsonObject) {
         try {
             this.id = Method.getString(jsonObject, "id");

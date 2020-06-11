@@ -20,6 +20,15 @@ public class FactoringProcess {
     public int status;
     public int currency;
 
+    public FactoringProcess(String demandId, String quoteId, Date createdDate, double amount, int status, int currency) {
+        this.demandId = demandId;
+        this.quoteId = quoteId;
+        this.createdDate = createdDate;
+        this.amount = amount;
+        this.status = status;
+        this.currency = currency;
+    }
+
     public FactoringProcess(JSONObject jsonObject) {
         try {
             this.demandId = Method.getString(jsonObject, "demandId");

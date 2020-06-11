@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MyApplication;
 import com.gelistirmen.finance.R;
 import com.gelistirmen.finance.model.operation.Invoice;
 import com.gelistirmen.finance.presentation.activity.BaseActivity;
@@ -57,7 +58,8 @@ public class InvoiceSettingsViewHandler implements View.OnClickListener, TextWat
         this.layout = (LinearLayout) activity.getLayoutInflater().inflate(R.layout.view_invoice_settings, null);
         ButterKnife.bind(this, this.layout);
 
-        this.imageView.setImageBitmap(BitmapFactory.decodeByteArray(this.invoice.pictureData, 0, this.invoice.pictureData.length));
+        if (!MyApplication.mocking)
+            this.imageView.setImageBitmap(BitmapFactory.decodeByteArray(this.invoice.pictureData, 0, this.invoice.pictureData.length));
         this.serialNumberTextView.setText(this.invoice.serialNo);
         this.invoiceNumberTextView.setText(this.invoice.no);
         this.amountEditText.addTextChangedListener(this);

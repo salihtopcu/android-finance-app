@@ -1,9 +1,11 @@
 package com.gelistirmen.finance.data.remote.membership;
 
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.android.volley.Request;
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MockProvider;
 import com.gelistirmen.finance.data.remote.base.FMDao;
 import com.gelistirmen.finance.model.membership.RegisterAttempt;
 import com.gelistirmen.finance.model.membership.RegisterResponse;
@@ -44,5 +46,11 @@ public class RegisterDao extends FMDao {
     @Override
     protected void onAfterSuccessRequest(Object data) {
         super.onAfterSuccessRequest(new RegisterResponse((JSONObject) data));
+    }
+
+    @Nullable
+    @Override
+    protected Object getMockData() {
+        return MockProvider.registerResponse();
     }
 }

@@ -11,6 +11,12 @@ public class QuoteStatusResponse {
     public boolean isCancelledByDebtor;
     public boolean isCancelledByPayee;
 
+    public QuoteStatusResponse(int status, boolean isCancelledByDebtor, boolean isCancelledByPayee) {
+        this.status = status;
+        this.isCancelledByDebtor = isCancelledByDebtor;
+        this.isCancelledByPayee = isCancelledByPayee;
+    }
+
     public QuoteStatusResponse(JSONObject jsonObject) {
         try {
             this.status = Method.getInt(jsonObject, "status");

@@ -1,6 +1,9 @@
 package com.gelistirmen.finance.data.remote.settings;
 
+import android.support.annotation.Nullable;
+
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MockProvider;
 import com.gelistirmen.finance.data.remote.base.FMDao;
 import com.gelistirmen.finance.model.settings.City;
 import com.gelistirmen.finance.model.settings.County;
@@ -20,5 +23,11 @@ public class CountiesDao extends FMDao {
         if (data instanceof JSONArray)
             counties = new County.List((JSONArray) data);
         super.onAfterSuccessRequest(counties);
+    }
+
+    @Nullable
+    @Override
+    protected Object getMockData() {
+        return MockProvider.counties();
     }
 }

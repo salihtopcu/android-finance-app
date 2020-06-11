@@ -10,6 +10,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MyApplication;
 import com.gelistirmen.finance.R;
 import com.gelistirmen.finance.data.local.Cache;
 import com.gelistirmen.finance.data.remote.base.VolleyDao;
@@ -90,7 +91,7 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     protected void onResume() {
-        if (super.isFirstLoad)
+        if (super.isFirstLoad && !MyApplication.mocking)
             this.scrollView.setVisibility(View.INVISIBLE);
         super.onResume();
         if (!super.isFirstLoad && HomeActivity.requiresRefresh) {

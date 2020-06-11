@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MyApplication;
 import com.gelistirmen.finance.R;
 import com.gelistirmen.finance.data.remote.base.VolleyDao;
 import com.gelistirmen.finance.data.remote.operation.ApproveQuoteDebtorDao;
@@ -60,7 +61,8 @@ public class InvoiceAssessmentActivity extends BaseActivity implements DateNoteI
         super.setActionBarTitle(R.string.invoice_approval);
         super.hideBackgroundImage();
         super.setMainScrollContent(this.scrollView);
-        this.scrollView.setVisibility(View.INVISIBLE);
+        if (!MyApplication.mocking)
+            this.scrollView.setVisibility(View.INVISIBLE);
     }
 
     @Override

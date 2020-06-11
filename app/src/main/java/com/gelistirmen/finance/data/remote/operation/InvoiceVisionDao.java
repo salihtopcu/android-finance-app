@@ -1,7 +1,10 @@
 package com.gelistirmen.finance.data.remote.operation;
 
+import android.support.annotation.Nullable;
+
 import com.android.volley.Request;
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MockProvider;
 import com.gelistirmen.finance.data.remote.base.FMDao;
 import com.gelistirmen.finance.model.operation.Invoice;
 import com.gelistirmen.finance.util.Method;
@@ -34,5 +37,11 @@ public class InvoiceVisionDao extends FMDao {
         Invoice invoice = new Invoice((JSONObject) data);
         invoice.pictureData = invoicePictureData;
         super.onAfterSuccessRequest(invoice);
+    }
+
+    @Nullable
+    @Override
+    protected Object getMockData() {
+        return MockProvider.invoice();
     }
 }

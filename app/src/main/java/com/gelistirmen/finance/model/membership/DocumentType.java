@@ -14,6 +14,13 @@ public class DocumentType {
     public boolean mandatory;
     public int validityPeriod;
 
+    public DocumentType(String id, String name, boolean mandatory, int validityPeriod) {
+        this.id = id;
+        this.name = name;
+        this.mandatory = mandatory;
+        this.validityPeriod = validityPeriod;
+    }
+
     public DocumentType(JSONObject jsonObject) {
         try {
             this.id = Method.getString(jsonObject, "id");

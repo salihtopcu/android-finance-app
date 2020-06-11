@@ -1,5 +1,7 @@
 package com.gelistirmen.finance.data.remote.membership;
 
+import android.support.annotation.Nullable;
+
 import com.android.volley.Request;
 import com.gelistirmen.finance.Constants;
 import com.gelistirmen.finance.data.remote.base.FMDao;
@@ -22,5 +24,11 @@ public class ResetPasswordDao extends FMDao {
             e.printStackTrace();
             super.onAfterFailedRequest(new Error(ErrorType.Client_ParseError, "Reset password parse error."));
         }
+    }
+
+    @Nullable
+    @Override
+    protected Object getMockData() {
+        return "Reset password mail has been sent.";
     }
 }

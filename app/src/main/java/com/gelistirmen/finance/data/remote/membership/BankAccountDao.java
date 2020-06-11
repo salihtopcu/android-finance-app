@@ -1,7 +1,10 @@
 package com.gelistirmen.finance.data.remote.membership;
 
+import android.support.annotation.Nullable;
+
 import com.android.volley.Request;
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MockProvider;
 import com.gelistirmen.finance.data.remote.base.FMDao;
 import com.gelistirmen.finance.model.membership.BankAccount;
 
@@ -16,5 +19,11 @@ public class BankAccountDao extends FMDao {
     @Override
     protected void onAfterSuccessRequest(Object data) {
         super.onAfterSuccessRequest(new BankAccount((JSONObject) data));
+    }
+
+    @Nullable
+    @Override
+    protected Object getMockData() {
+        return MockProvider.bankAccount();
     }
 }

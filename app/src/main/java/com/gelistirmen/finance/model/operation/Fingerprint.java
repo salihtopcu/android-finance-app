@@ -13,6 +13,11 @@ public class Fingerprint implements Serializable {
     public String value;
     public int timeout;
 
+    public Fingerprint(String value, int timeout) {
+        this.value = value;
+        this.timeout = timeout;
+    }
+
     public Fingerprint(JSONObject jsonObject) {
         try {
             this.value = Method.getString(jsonObject, "fingerPrint");

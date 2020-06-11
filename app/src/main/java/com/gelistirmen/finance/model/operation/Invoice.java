@@ -29,6 +29,26 @@ public class Invoice {
     public String debtorTaxNo;
     public byte[] pictureData;
 
+    public Invoice(String id, Date createdDate, Date updatedDate, double amount, int currency, boolean isWholeCost, double paymentCost, int interestResponsible, String serialNo, String no, Date date, String eInvoiceHash, int type, Date estimatedMaturityDate, String payeeTaxNo, String debtorTaxNo, byte[] pictureData) {
+        this.id = id;
+        this.createdDate = createdDate;
+        this.updatedDate = updatedDate;
+        this.amount = amount;
+        this.currency = currency;
+        this.isWholeCost = isWholeCost;
+        this.paymentCost = paymentCost;
+        this.interestResponsible = interestResponsible;
+        this.serialNo = serialNo;
+        this.no = no;
+        this.date = date;
+        this.eInvoiceHash = eInvoiceHash;
+        this.type = type;
+        this.estimatedMaturityDate = estimatedMaturityDate;
+        this.payeeTaxNo = payeeTaxNo;
+        this.debtorTaxNo = debtorTaxNo;
+        this.pictureData = pictureData;
+    }
+
     public Invoice(String debtorTaxNo, Date createDate, Date date, String no) {
         this.debtorTaxNo = debtorTaxNo;
         this.createdDate = createDate;

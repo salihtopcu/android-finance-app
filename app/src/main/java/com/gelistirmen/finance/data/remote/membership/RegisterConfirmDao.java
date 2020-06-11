@@ -37,4 +37,10 @@ public class RegisterConfirmDao extends FMDao {
     protected void onAfterSuccessRequest(Object data) {
         super.onAfterSuccessRequest();
     }
+
+    @Nullable
+    @Override
+    protected Object getMockData() {
+        return null;
+    }
 }

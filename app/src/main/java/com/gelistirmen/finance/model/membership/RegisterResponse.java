@@ -9,6 +9,11 @@ public class RegisterResponse {
     public String userId;
     public boolean changePasswordRequest;
 
+    public RegisterResponse(String userId, boolean changePasswordRequest) {
+        this.userId = userId;
+        this.changePasswordRequest = changePasswordRequest;
+    }
+
     public RegisterResponse(JSONObject jsonObject) {
         try {
             this.userId = Method.getString(jsonObject, "id");

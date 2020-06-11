@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MyApplication;
 import com.gelistirmen.finance.data.local.Cache;
 import com.gelistirmen.finance.data.remote.membership.RenewTokenDao;
 import com.gelistirmen.finance.model.membership.RenewTokenResponse;
@@ -17,6 +18,9 @@ import org.json.JSONObject;
 public abstract class FMDao extends VolleyDao implements VolleyDao.DataHandler {
 
     private boolean requiresToken;
+
+    @Nullable
+    protected abstract Object getMockData();
 
     /**
      * @param listener
@@ -46,6 +50,18 @@ public abstract class FMDao extends VolleyDao implements VolleyDao.DataHandler {
 //        super.bodyDataObject.put("data", dataJsonObject);
 //        super.dataHandler = this;
 //    }
+
+    @Override
+    public void execute() {
+        if (MyApplication.mocking) {
+            Object data = this.getMockData();
+            if (data == null)
+                super.onAfterSuccessRequest();
+            else
+                super.onAfterSuccessRequest(data);
+        } else
+            super.execute();
+    }
 
     @Override
     public Object handleJsonObjectData(JSONObject data) {

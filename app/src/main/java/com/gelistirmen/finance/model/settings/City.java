@@ -12,6 +12,11 @@ public class City {
     public String id;
     public String name;
 
+    public City(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public City(JSONObject jsonObject) {
         try {
             this.id = Method.getString(jsonObject, "id");

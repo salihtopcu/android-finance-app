@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import com.gelistirmen.finance.Constants;
+import com.gelistirmen.finance.MyApplication;
 import com.gelistirmen.finance.R;
 import com.gelistirmen.finance.data.remote.base.VolleyDao;
 import com.gelistirmen.finance.data.remote.operation.DocumentTypesDao;
@@ -56,7 +57,8 @@ public class UploadDocumentActivity extends BaseActivity implements DocumentType
     @Override
     protected void onResume() {
         super.onResume();
-        this.scrollView.setVisibility(View.INVISIBLE);
+        if (!MyApplication.mocking)
+            this.scrollView.setVisibility(View.INVISIBLE);
     }
 
     private void downloadDocumentTypes() {

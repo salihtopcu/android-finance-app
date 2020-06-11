@@ -34,6 +34,26 @@ public class Quote {
     public double paymentAmount;
     public int currency;
 
+    public Quote(String id, int status, Date createdDate, Date updatedDate, String payeeCompanyName, double invoiceAmount, Date maturityDate, double interestAmount, int interestRate, Invoice.List invoices, String debtorFullName, String debtorTaxNo, String companyRepresentativeFullName, int maturity, double totalAmount, double paymentAmount, int currency) {
+        this.id = id;
+        this.status = status;
+        this.createdDate = createdDate;
+        this.updatedDate = updatedDate;
+        this.payeeCompanyName = payeeCompanyName;
+        this.invoiceAmount = invoiceAmount;
+        this.maturityDate = maturityDate;
+        this.interestAmount = interestAmount;
+        this.interestRate = interestRate;
+        this.invoices = invoices;
+        this.debtorFullName = debtorFullName;
+        this.debtorTaxNo = debtorTaxNo;
+        this.companyRepresentativeFullName = companyRepresentativeFullName;
+        this.maturity = maturity;
+        this.totalAmount = totalAmount;
+        this.paymentAmount = paymentAmount;
+        this.currency = currency;
+    }
+
     public Quote(JSONObject jsonObject) {
         try {
             this.id = Method.getString(jsonObject, "id");

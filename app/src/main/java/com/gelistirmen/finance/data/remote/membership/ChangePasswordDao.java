@@ -1,5 +1,6 @@
 package com.gelistirmen.finance.data.remote.membership;
 
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.android.volley.Request;
@@ -29,5 +30,11 @@ public class ChangePasswordDao extends FMDao {
     @Override
     protected void onAfterSuccessRequest(Object data) {
         super.onAfterSuccessRequest();
+    }
+
+    @Nullable
+    @Override
+    protected Object getMockData() {
+        return null;
     }
 }

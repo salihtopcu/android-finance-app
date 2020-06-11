@@ -1,5 +1,6 @@
 package com.gelistirmen.finance.data.remote.membership;
 
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.android.volley.Request;
@@ -32,5 +33,11 @@ public class CompanyUpdateDao extends FMDao {
         } catch (JSONException e) {
             Log.e("JSON Create", e.toString());
         }
+    }
+
+    @Nullable
+    @Override
+    protected Object getMockData() {
+        return null;
     }
 }
